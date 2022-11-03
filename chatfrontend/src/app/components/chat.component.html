@@ -1,0 +1,14 @@
+<p>chat works!</p>
+<div *ngFor="let m of messages">
+  <h2>{{ m.sender }} says:</h2>
+  <p>{{ m.content }}</p>
+  <br />
+  <p>at {{ m.timestamp }}</p>
+</div>
+<div *ngIf="messages.length == 0">
+  <h2>No messages to display</h2>
+</div>
+<form [formGroup]="messageForm" (ngSubmit)="sendMessage()">
+  <textarea cols="30" rows="10" formControlName="message"></textarea>
+  <button type="submit">Send</button>
+</form>

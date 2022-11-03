@@ -1,0 +1,15 @@
+<h1>Choose chat users</h1>
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <select formControlName="sender">
+    <option value="1">Jack</option>
+    <option value="2">Fred</option>
+    <option value="3">Barney</option>
+  </select>
+  <select formControlName="recipient">
+    <option value="1">Jack</option>
+    <option value="2">Fred</option>
+    <option value="3">Barney</option>
+  </select>
+  <button type="submit">Go to chat</button>
+</form>
+<router-outlet></router-outlet>
